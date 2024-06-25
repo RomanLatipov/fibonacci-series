@@ -1,5 +1,16 @@
 function fibonacci(num) {
-  // type your code here
+  if (num === 0) return 0
+  if (num === 1) return 1
+
+  let a = 0;
+  let b = 1;
+
+  for (let i=1; i<num; i++) {
+    const temp = a + b;
+    a = b;
+    b = temp;
+  }
+  return b;
 }
 
 if (require.main === module) {
@@ -22,3 +33,5 @@ module.exports = fibonacci;
 
 // Please add your pseudocode to this file
 // And a written explanation of your solution
+
+//0 1 1 2 3 5 8 13
